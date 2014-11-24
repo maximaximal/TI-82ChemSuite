@@ -1,0 +1,11 @@
+BackgroundOff
+GridOff
+AxesOff
+PlotsOff
+ClrDraw
+
+Text(5,1,"Just testing out")
+Text(15,1,"Drawing!")
+
+Text(30,30,"Circle")
+Circle([neg]5,[neg]5,4)
