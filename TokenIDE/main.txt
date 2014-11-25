@@ -1,11 +1,15 @@
-BackgroundOff
-GridOff
-AxesOff
-PlotsOff
-ClrDraw
+While 1
+Menu("MAIN MENU","TEST",1,"TEST",2,"ENDE",3
 
-Text(5,1,"Just testing out")
-Text(15,1,"Drawing!")
+Lbl 1
+Disp "ACTION 1!"
+Goto 0
+Lbl 2
+Disp "ACTION 2!"
+Goto 0
+Lbl 3
+Disp "Beende..."
+Return
 
-Text(30,30,"Circle")
-Circle([neg]5,[neg]5,4)
+Lbl 0
+End
