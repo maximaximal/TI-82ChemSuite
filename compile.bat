@@ -2,7 +2,7 @@
 
 set tibasic=%1
 
-call "%tibasic%" "%~dp0\TokenIDE\main.txt"
+call %tibasic% %~dp0\TokenIDE\main.txt
 
 move /Y "%~dp0\TokenIDE\main.8xp" "%~dp0\chemsuite.8xp"
 
