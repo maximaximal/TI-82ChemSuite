@@ -1,1 +1,139 @@
-**TI83F*
+
+6->dim([list]VAR)
+X->[list]VAR(1)
+Y->[list]VAR(2)
+F->[list]VAR(3)
+K->[list]VAR(4)
+R->[list]VAR(5)
+P->[list]VAR(6)
+
+1->R
+0->K
+0->F
+{2,4,7,9,11,14}->[list]COR
+6->dim([list]RS)
+
+Disp ""
+Disp " V*C*A[root]^V*C*K[root]^ "
+Output(2,8,"=")
+Output(2,15," ")
+Output(8,4,"^ FUER HILFE")
+3->Y
+2->X
+Output(3,X,"-")
+While F=0
+Repeat Ans
+getKey->K
+End
+Output(3,X," ")
+
+If K=55
+Then
+ClrHome
+Output(1,1,"BEWGEN SIE DEN CURSOR MIT DEN PFEILTASTEN UND WAELEN SIE DIE GROESSE, DIE SIE BERECHNEN MOECHTEN MIT ENTER. WEITER MIT ENTER   "
+Pause
+ClrHome
+Disp "V: VOLUMEN"
+Disp "C: KONZENTATION"
+Disp "[root]^ LADUNG DES IONS"
+Output(3,2,":")
+Disp ""
+Disp "WEITER MIT ENTER"
+Pause
+ClrHome
+End
+
+If K=26
+Then
+6,R+1)->R
+[list]COR(R)->X
+Output(3,X,"-"
+End
+
+If K=24
+Then
+max(1,R-1)->R
+[list]COR(R)->X
+Output(3,X,"-")
+End
+
+If K=105
+Then
+1->F
+End
+End
+
+ClrHome
+3
+
+If R!=1
+Then
+Input "V1:",P
+P->[list]RS(1)
+End
+
+If R!=2
+Then
+Input "C1:",P
+P->[list]RS(2)
+End
+
+If R!=3
+Then
+Input "X1:",P
+abs(P)->[list]RS(3)
+End
+
+If R!=4
+Then
+Input "V2:",P
+P->[list]RS(4)
+End
+
+If R!=5
+Then
+Input "C2:",P
+P->[list]RS(5)
+End
+
+If R!=6
+Then
+Input "X2:",P
+abs(P)->[list]RS(6)
+End
+
+If R=1
+Disp "V1:",[list]RS(4)*[list]RS(5)*[list]RS(6)/([list]RS(2)*[list]RS(3))
+
+If R=2
+Disp "C1:",[list]RS(4)*[list]RS(5)*[list]RS(6)/([list]RS(1)*[list]RS(3))
+
+If R=3
+Disp "X1:",[list]RS(4)*[list]RS(5)*[list]RS(6)/([list]RS(2)*[list]RS(1)
+
+If R=4
+Disp "V2:",[list]RS(1)*[list]RS(2)*[list]RS(3)/([list]RS(6)*[list]RS(5))
+
+If R=5
+Disp "C2:",[list]RS(1)*[list]RS(2)*[list]RS(3)/([list]RS(6)*[list]RS(4))
+
+If R=6
+Disp "X2:",[list]RS(1)*[list]RS(2)*[list]RS(3)/([list]RS(4)*[list]RS(5))
+
+[list]VAR(1)->X
+[list]VAR(2)->Y
+[list]VAR(3)->F
+[list]VAR(4)->K
+[list]VAR(5)->R
+[list]VAR(6)->P
+
+DelVar [list]VAR
+DelVar [list]COR
+DelVar [list]RS
+
+
+
+
+
+
+log(ZXscl
