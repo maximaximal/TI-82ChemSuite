@@ -12,8 +12,7 @@ Other build methods can follow in the future.
 
 ## Compiler (tibasic.exe)
 
-The compiler is a modified version of the TIBasic compiler on 
-http://sourceforge.net/projects/tibasic/. The modified code is hosted at sourceforge
+The compiler is a modified version of the TIBasic compiler on [sourceforge](http://sourceforge.net/projects/tibasic/). The modified code is hosted at sourceforge
 too, under this address: http://sourceforge.net/u/maximaximal/tibasic/ci/master/tree/
 
 This modified compiler version enables us to use more advanced commands like 
@@ -22,7 +21,7 @@ will be coming in the future.
 
 ## Program Planning
 
-Planning is done at a (https://docs.google.com/document/d/1re47MPaEDtquFhziMC5AIkDIJBxpZnwZsL6nwT_DZ18/edit?usp=sharing)[google drive document] to 
+Planning is done at a [google drive document](https://docs.google.com/document/d/1re47MPaEDtquFhziMC5AIkDIJBxpZnwZsL6nwT_DZ18/edit?usp=sharing) to 
 make the writing and changes more dynamic. Everybody can comment in that document.
 
 Planning is done in German and English. The languages are mixed together, because this document is made mainly for
