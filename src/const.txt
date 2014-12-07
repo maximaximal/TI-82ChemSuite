@@ -1,0 +1,66 @@
+ClrHome
+Input "(? :--:t "FOR HELP":--:):  ",STR0
+If inString(STR0,"?")
+Then
+  ClrHome
+  Output(1,1,":--:t "DATA OVERRIDE DISCLAIMER":--:")
+  Pause
+  ClrHome
+  Output(1,1,":--:t "DATA OVERRIDE EXPLANATION":--:")
+  Pause
+  ClrHome
+End
+
+While Ans
+  If not(inString(STR0,"A"))
+  149597870700->A
+  "M :--:t "ASTRONOMICAL UNIT":--:"
+
+  If not(inString(STR0,"G")
+  6.67384*10^[neg]11->G
+  "M^3/(KG*S^2) :--:t "GRAVITATIONAL CONSTANT":--:"
+
+  If not(inString(STR0,"E")
+  8.854187817*10^[neg]12->E
+  "A*S/(V*M) :--:t "VACUUM PERMITTIVITY":--:"
+
+  If not(inString(STR0,"F")
+  96485.3365->F
+  "C/M :--:t "FARADAY CONSTANT":--:"
+
+  If not(inString(STR0,"H")
+  6.62606957*10^[neg]34->P
+  "J*S :--:t "PLANCK CONTANT":--:"
+
+  If not(inString(STR0,"I")
+  1*10^[neg]12->I
+  "W/M^2 :--:t "INTENSITY AT THRESHOLD OF HEARING":--:"
+
+  If not(inString(STR0,"K")
+  1.38016488*10^[neg]23->K
+  "J/K :--:t "BOLTZMANN CONSTANT":--:"
+
+  If not(inString(STR0,"N")
+  6.02214129*10^23->U
+  "MOL^-1 :--:t "AVOGADRO CONSTANT":--:"
+
+  If not(inString(STR0,"R")
+  8.314462->R
+  "J/(MOL*K) :--:t "GAS CONSTANT":--:"
+
+  If not(inString(STR0,"P")
+  1.013*10^5->P
+  "PA :--:t "AIR PRESSURE ON SEA LEVEL":--:"
+
+  If not(inString(STR0,"T")
+  [neg]273.15->T
+  "[degrees]C :--:t "ABSOLUTE ZERO":--:"
+
+  If not(inString(STR0,"U")
+  [pi]*4*10^[neg]7->U
+  "N/A^2 :--:t "VACUUM PERMIABILITY":--:"
+
+  If not(inString(STR0,"V")
+  2.241*10^[neg]2->V
+  "M^3/MOL :--:t "IDEAL GAS VOLUME PER MOL":--:"
+End
