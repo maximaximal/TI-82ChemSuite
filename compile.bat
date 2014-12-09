@@ -1,11 +1,10 @@
 ::@echo off
 
 set tibasic=%~dp0\tibasic.exe
-set language=de
 
-call "%tibasic%" -a -c %~dp0\config.xml -l %language% -w %~dp0\src\ "%~dp0\src\main.txt"
+call "%tibasic%" -a -w %~dp0\TokenIDE\ "%~dp0\TokenIDE\main.txt"
 
-move /Y "%~dp0\src\main.8xp" "%~dp0\chemsuite.8xp"
+move /Y "%~dp0\TokenIDE\main.8xp" "%~dp0\chemsuite.8xp"
 
 IF "%2"=="start" (
 	SET TILEM=%3

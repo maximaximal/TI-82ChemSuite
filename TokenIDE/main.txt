@@ -1,0 +1,18 @@
+//Main Menu
+//This is a comment.
+
+While 1
+Menu("MAIN MENU","TEST",1,"TEST",2,"ENDE",3
+  Lbl 1
+    :--:include "action1.txt"
+    Goto 0
+  Lbl 2
+    :--:include "action2.txt"
+    Goto 0
+  Lbl 3
+    Disp "Beende..."
+    Return
+  
+  //Exit point of the loop (Continue emulation)
+  Lbl 0
+End
