@@ -1,5 +1,21 @@
 ClrHome
-Input "(? :--:t "FOR HELP":--:):  ",STR0
+1->P
+" "->Str0
+Output(1,1,":--:t "FOR HELP":--:")
+While P>0
+  Repeat Ans>34 and min(Ans≠{44,45,94,95,102})
+  getKey->K
+End
+If K≠105
+Then
+  sub("ABC  DEFGHIJKLMNOPQRSTUVWXYZ   :?",K-20-iPart(0.1*K),1)
+  Output(2,P,Ans)
+  Ans+Str0->Str0
+  P+1->P
+Else
+  [neg]9->P
+End
+
 If inString(STR0,"?")
 Then
   ClrHome
