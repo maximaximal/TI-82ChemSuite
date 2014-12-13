@@ -17,7 +17,7 @@ Disp ""
 Disp " V*C*A[root]^V*C*K[root]^ "
 Output(2,8,"=")
 Output(2,15," ")
-Output(8,4,"^ FUER HILFE")
+Output(8,4,"^ :--:t "FOR HELP":--:")
 3->Y
 2->X
 Output(3,X,"-")
@@ -45,7 +45,7 @@ End
 
 If K=26
 Then
-6,R+1)->R
+(6,R+1)->R
 [list]COR(R)->X
 Output(3,X,"-"
 End
@@ -130,10 +130,5 @@ Disp "X2:",[list]RS(1)*[list]RS(2)*[list]RS(3)/([list]RS(4)*[list]RS(5))
 DelVar [list]VAR
 DelVar [list]COR
 DelVar [list]RS
-
-
-
-
-
 
 log(ZXscl
