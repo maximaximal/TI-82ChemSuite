@@ -1,9 +1,9 @@
-ClrHome
+﻿ClrHome
 1->P
 " "->Str0
 Output(1,1,":--:t "FOR HELP":--:")
 While P>0
-  Repeat Ans>34 and min(Ans≠{44,45,94,95,102})
+  Repeat Ans>34 and min(Ans!={44,45,94,95,102})
   getKey->K
 End
 If K≠105
