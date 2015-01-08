@@ -1,82 +1,273 @@
-﻿ClrHome
-1->P
-" "->Str0
-Output(1,1,":--:t "FOR HELP":--:")
-While P>0
-  Repeat Ans>34 and min(Ans!={44,45,94,95,102})
-  getKey->K
-End
-If K≠105
+{S,C,F,T,K}->[list]VAR
+"SET LANGUAGE:"
+"DE"
+
+ClrHome
+
+If Ans="DE"
 Then
-  sub("ABC  DEFGHIJKLMNOPQRSTUVWXYZ   :?",K-20-5*iPart(0.1*K),1)
-  Output(2,P,Ans)
-  Ans+Str0->Str0
-  P+1->P
+"A:ASTRONOMISCHE EINHEIT:M:G:GRAVITATIONSKONSTANTE:M^3/(KG*S^2):E:ELEKTRISCHE FELDKONSTANTE:A*S/(V*M):F:FARADAYKONSTANTE:C/M:H:PLANCKSCHES WIRKUNGSQUANTUM:J*S:I:INTENSITAET AN DER HOERSCHWELLE:W/M^2:K:BOLTZMANNKONSTANTE:J/K:N:AVOGADROKONSTANTE:MOL^-1:R:UNIVERSELLE GASKONSTANTE:J/(MOL*K):P:STANDARTLUFTDRUCK AUF MEERESHOEHE:PA:T:ABSOLUTER NULLPUNKT:[degrees]C:U:MAGNETISCHE FELDKONSTANTE:N/A^2:V:MOLARES GASVOLUMEN BEI STANDARTBEDINGUNGEN:M^3/MOL:DE"->STR9
+{2,21,149597870700,28,21,6.67384;[neg]11,64,25,8.854187817;[neg]12,102,16,96485.3365,125,27,6.62606957;[neg]34,159,31,1;[neg]12,198,18,1.38016488;[neg]23,223,17,6.02214129;23,248,24,8.314462,285,33,1.013;5,324,19,[neg]273.15,349,25,[pi]*4;[neg]7,382,42,2.241;[neg]2,433}->[list]TECOA
+
 Else
-  [neg]9->P
+If Ans!="EN"
+Output(8,1,"LANG. UNSUPORTED")
+
+"A:ASTRONOMICAL UNIT:M:G:GRAVITATIONAL CONSTANT:M^3/(KG*S^2):E:VACUUM PERMITTIVITY:A*S/(V*M):F:FARADAY CONSTANT:C/M:H:PLANCK CONTANT:J*S:I:INTENSITY AT THRESHOLD OF HEARING:W/M^2:K:BOLTZMANN CONSTANT:J/K:N:AVOGADRO CONSTANT:MOL^-1:R:GAS CONSTANT:J/(MOL*K):P:AIR PRESSURE ON SEA LEVEL:PA:T:ABSOLUTE ZERO:[degrees]C:U:VACUUM PERMIABILITY:N/A^2:V:IDEAL GAS VOLUME PER MOL:M^3/MOL:EN"->STR9
+{2,17,149597870700,24,22,6.67384;[neg]11,61,19,8.854187817;[neg]12,93,16,96485.3365,116,14,6.62606957;[neg]34,137,33,1;[neg]12,178,18,1.38016488;[neg]23,203,17,6.02214129;23,228,12,8.314462,253,25,1.013;5,284,13,[neg]273.15,303,19,[pi]*4;[neg]7,330,24,2.241;[neg]2,363}->[list]TECOA
 End
 
-If inString(STR0,"?")
+
+
+
+1->P
+" "->STR0
+If sub(STR9,length(STR9)-1,2)="EN"
+Disp "? FOR HELP"
+If sub(STR9,length(STR9)-1,2)="DE"
+Disp "? FUER HILFE"
+While P>0
+Repeat Ans>34&Ans!={44,45,94,95,102})
+getKey->K
+End
+If K!=105
 Then
-  ClrHome
-  Output(1,1,":--:t "DATA OVERRIDE DISCLAIMER":--:")
-  Pause
-  ClrHome
-  Output(1,1,":--:t "DATA OVERRIDE EXPLANATION":--:")
-  Pause
-  ClrHome
+sub("ABC  DEFGHIJKLMNOPQRSTUVWXYZ    :?",K-20-5*iPart(0.1*K),1)
+Output(2,P,Ans)
+Ans+STR0->STR0
+P+1->P
+If inString(STR0,"?")
+Output(7,11,"ENTER")
+Else
+[neg]9->P
+End
 End
 
-While Ans
-  If not(inString(STR0,"A"))
-  149597870700->A
-  "M :--:t "ASTRONOMICAL UNIT":--:"
 
-  If not(inString(STR0,"G")
-  6.67384*10^[neg]11->G
-  "M^3/(KG*S^2) :--:t "GRAVITATIONAL CONSTANT":--:"
-
-  If not(inString(STR0,"E")
-  8.854187817*10^[neg]12->E
-  "A*S/(V*M) :--:t "VACUUM PERMITTIVITY":--:"
-
-  If not(inString(STR0,"F")
-  96485.3365->F
-  "C/M :--:t "FARADAY CONSTANT":--:"
-
-  If not(inString(STR0,"H")
-  6.62606957*10^[neg]34->P
-  "J*S :--:t "PLANCK CONTANT":--:"
-
-  If not(inString(STR0,"I")
-  1*10^[neg]12->I
-  "W/M^2 :--:t "INTENSITY AT THRESHOLD OF HEARING":--:"
-
-  If not(inString(STR0,"K")
-  1.38016488*10^[neg]23->K
-  "J/K :--:t "BOLTZMANN CONSTANT":--:"
-
-  If not(inString(STR0,"N")
-  6.02214129*10^23->U
-  "MOL^-1 :--:t "AVOGADRO CONSTANT":--:"
-
-  If not(inString(STR0,"R")
-  8.314462->R
-  "J/(MOL*K) :--:t "GAS CONSTANT":--:"
-
-  If not(inString(STR0,"P")
-  1.013*10^5->P
-  "PA :--:t "AIR PRESSURE ON SEA LEVEL":--:"
-
-  If not(inString(STR0,"T")
-  [neg]273.15->T
-  "[degrees]C :--:t "ABSOLUTE ZERO":--:"
-
-  If not(inString(STR0,"U")
-  [pi]*4*10^[neg]7->U
-  "N/A^2 :--:t "VACUUM PERMIABILITY":--:"
-
-  If not(inString(STR0,"V")
-  2.241*10^[neg]2->V
-  "M^3/MOL :--:t "IDEAL GAS VOLUME PER MOL":--:"
+If inString(STR0,"?")&sub(STR9,length(STR9)-1,2)="DE"
+Then
+ClrHome
+Output(1,1,"DIESES PROGRAMM SPEICHERT DIVERSE PHYSIKALISCHE UND CHEMISCHE KONSTANTEN IN DEN VARIABLEN. WEITER MIT ENTER")
+Pause
+ClrHome
+Output(1,1,"GEBEN SIE DIE VARIABLENNAMEN EIN, DIE NICHT UEBERSCHRIEBEN WERDEN SOLLEN: BEISPIEL:ABOV         WEITER MIT ENTER")
+Pause
+ClrHome
+Output(1,1,"FUER LISTE DER VARIABLEN GEBEN SIE BITTE EINEN DOPPELPUNKT (:) EIN. WEITER MIT ENTER")
 End
+
+If inString(STR0,"?")&sub(STR9,length(STR9)-1,2)="EN"
+Then
+ClrHome
+Output(1,1,"THIS PROGRAM SAVES VARIOUS PHYSICAL AND CHEMICAL CONSTANTS IN THE INTERNAL VARIABLES. ENTER TO CONTINUE")
+Pause
+ClrHome
+Output(1,1,"PLEASE ENTER THE VARIABLES THAT SHOULD NOT BE OVERRIDDEN. FOR EXAMPLE: ABOV  ENTER TO CONTINUE")
+Pause
+ClrHome
+Output(1,1,"TO DISPLAY A LIST OF THIS VARIABLES TYPE IN A COLON (:). ENTER TO CONTINUE")
+End
+
+If inString(STR0,":")
+Then
+
+0->S
+2->C
+1->F
+While S=0
+ClrHome
+
+
+
+
+If C=0
+Then
+If sub(STR9,length(STR9)-1,2)="DE"
+Then
+Disp ""
+Disp "  BEENDEN"
+Disp ""
+Disp "  HILFE"
+End
+If sub(STR9,length(STR9)-1,2)="EN"
+Then
+Disp ""
+Disp "  QUIT"
+Disp ""
+Disp "  HELP"
+End
+Output(2*F,1,">")
+Output(8,6,"[box][dot][dot][dot][dot]")
+End
+
+
+
+
+If C=1
+Then
+If sub(STR9,length(STR9)-1,2)="DE"
+Disp "VARIABLE"
+If sub(STR9,length(STR9)-1,2)="EN"
+Disp "VARIABLE"
+If F>2
+Output(3,2,sub(STR9,[list]TECOA(3*F-8)-1,1))
+If F>1
+Output(4,2,sub(STR9,[list]TECOA(3*F-5)-1,1))
+Output(5,1,sub(STR9,[list]TECOA(3*F-2)-1,1))
+If F<=12
+Output(6,2,sub(STR9,[list]TECOA(3*F+1)-1,1))
+If F<=11
+Output(7,2,sub(STR9,[list]TECOA(3*F+4)-1,1))
+Output(8,6,"[dot][box][dot][dot][dot]")
+End
+
+
+
+If C=2
+Then
+If sub(STR9,length(STR9)-1,2)="DE"
+Disp "CONSTANTENNAME"
+If sub(STR9,length(STR9)-1,2)="EN"
+Disp "NAME OF CONSTANT"
+If F>2
+Output(3,2,sub(STR9,[list]TECOA(3*F-8)+1,[list]TECOA(3*F-7),15)))
+If F>1
+Output(4,2,sub(STR9,[list]TECOA(3*F-5)+1,[list]TECOA(3*F-4),15)))
+Output(5,1,sub(STR9,[list]TECOA(3*F-2)+1,[list]TECOA(3*F-1),16)))
+If F<=12
+Output(6,2,sub(STR9,[list]TECOA(3*F+1)+1,[list]TECOA(3*F+2),15)))
+If F<=11
+Output(7,2,sub(STR9,[list]TECOA(3*F+4)+1,[list]TECOA(3*F+5),15)))
+Output(8,6,"[dot][dot][box][dot][dot]")
+End
+
+
+
+
+If C=3
+Then
+If sub(STR9,length(STR9)-1,2)="DE"
+Disp "WERT"
+If sub(STR9,length(STR9)-1,2)="EN"
+Disp "MAGNITUDE"
+If F>2
+Output(3,2,[list]TECOA(3*F-6))
+If F>1
+Output(4,2,[list]TECOA(3*F-3))
+Output(5,1,[list]TECOA(3*F))
+If F<=12
+Output(6,2,[list]TECOA(3*F+3))
+If F<=11
+Output(7,2,[list]TECOA(3*F+6))
+Output(8,6,"[dot][dot][dot][box][dot]")
+End
+
+
+
+If C=4
+Then
+If sub(STR9,length(STR9)-1,2)="DE"
+Disp "EINHEIT"
+If sub(STR9,length(STR9)-1,2)="EN"
+Disp "UNIT"
+If F>2
+Output(3,2,sub(STR9,[list]TECOA(3*F-8)+[list]TECOA(3*F-7)+2,[list]TECOA(3*F-5)-[list]TECOA(3*F-8)-[list]TECOA(3*F-7)-4)
+If F>1
+Output(4,2,sub(STR9,[list]TECOA(3*F-5)+[list]TECOA(3*F-4)+2,[list]TECOA(3*F-2)-[list]TECOA(3*F-5)-[list]TECOA(3*F-4)-4)
+Output(5,1,sub(STR9,[list]TECOA(3*F-2)+[list]TECOA(3*F-1)+2,[list]TECOA(3*F+1)-[list]TECOA(3*F-2)-[list]TECOA(3*F-1)-4)
+If F<=12
+Output(6,2,sub(STR9,[list]TECOA(3*F+1)+[list]TECOA(3*F+2)+2,[list]TECOA(3*F+4)-[list]TECOA(3*F+1)-[list]TECOA(3*F+2)-4)
+If F<=11
+Output(7,2,sub(STR9,[list]TECOA(3*F+4)+[list]TECOA(3*F+5)+2,[list]TECOA(3*F+7)-[list]TECOA(3*F+4)-[list]TECOA(3*F+5)-4)
+Output(8,6,"[dot][dot][dot][dot][box]")
+End
+
+
+
+
+
+
+Repeat Ans
+getKey->K
+End
+
+If K=26
+4,C+1)->C
+If K=24
+max(0,C-1)->C
+
+If C=0
+Then
+(K=34)+F-(K=25)->F
+2,F)->F
+max(1,F)->F
+Else
+If K=25
+max(1,F-1)->F
+If K=34
+13,F+1)->F
+End
+
+If K=75
+1->S
+
+If (C=0&F=1)&K=105
+1->S
+
+If (C=0&F=2)&K=105
+Then
+ClrHome
+If sub(STR9,length(STR9)-1,2)="DE"
+Output(1,1,"DIESE FUNKTION IST LEIDER NOCH NICHT VERFUEGBAR. WEITER MIT ENTER")
+If sub(STR9,length(STR9)-1,2)="EN"
+Output(1,1,"THIS FUNKTION IS NOT AVAILABLE YET. ENTER TO CONTINUE")
+Pause
+End
+
+
+
+End
+End
+
+If not(inString(STR0,"?")|inString(STR0,":")
+Then
+
+"MAKESHIFT"
+
+If not(inString(STR0,"A")
+149597870700->A
+If not(inString(STR0,"G")
+6.67384;[neg]11->G
+If not(inString(STR0,"E")
+8.854187817;[neg]12->G
+If not(inString(STR0,"F")
+96485.3365->F
+If not(inString(STR0,"H")
+6.62606957;[neg]34->H
+If not(inString(STR0,"I")
+1;[neg]12->I
+If not(inString(STR0,"K")
+38016488;[neg]23->K
+If not(inString(STR0,"N")
+6.02214129;23->N
+If not(inString(STR0,"R")
+8.314462->R
+If not(inString(STR0,"P")
+1.013;5->P
+If not(inString(STR0,"T")
+[neg]273.15->T
+If not(inString(STR0,"U")
+[pi]*4;[neg]7->U
+If not(inString(STR0,"V")
+2.241;[neg]2->V
+
+
+End
+
+
+
+
+
+
+
+
